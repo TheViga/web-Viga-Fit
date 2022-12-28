@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --hospital-yellow: #FED049;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 24rem);
+    gap: 2.6rem;
+    place-content: center;
+}
+
+.product {
+    width: 24rem;
+    border: 0.2rem groove var(--very-light-pink);
+    border-radius: 2rem;
+}
+
+.product img {
+    width: 23rem;
+    height: 23rem;
+    border-radius: 2rem;
+    object-fit: cover;
+    display: flex;
+}
+
+.product-inf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.2rem;
+    background-color: #FCF9BE;
+    border-radius: 0 0 2rem 2rem;
+}
+
+.product-inf figure {
+    margin-right: 1rem;
+}
+
+.product-inf figure img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.product-inf div p{
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-inf div p:nth-child(1) {
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 0.4rem; 
+}
+
+.product-inf div p:nth-child(2) {
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+@media (max-width: 640px) {
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, 14rem);
+    }
+    .product {
+        width: 14rem;
+    }
+    
+    .product img {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .product-inf div p {
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-inf figure {
+        margin-right: 0.5rem;
+    }
+}
