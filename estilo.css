@@ -150,9 +150,12 @@ nav {
 
 /* ESTILOS EN MENÚ EN MOBILE*/
 .mobile-menu {
+    background-color: var(--white);
     position: absolute;
     top: 5.2rem;
-    padding: 2.4rem 2.4rem 0 2.4rem;
+    margin-top: 2rem;
+    margin-left: 0;
+    padding: 0 2.4rem 0 2.4rem;
     /*display: flex;
     flex-direction: column;
     justify-content: space-between;*/
@@ -204,6 +207,97 @@ nav {
     bottom: 0 !important; 
 }
 
+/* ESTILOS CARRITO DE COMPRA */
+
+.product-detail {
+    background-color: var(--white);
+    width: 36rem;
+    padding: 1.4rem;
+    position: absolute;
+    right: 0;
+}
+
+.title-container {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.title-container img {
+    transform: rotate(180deg);
+    margin-right: 1.4rem;
+}
+
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.6rem;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 2.4rem;
+    border-radius: 0.8rem;
+    padding: 0 2.4rem;
+}
+
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.order p span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+    font-size: var(--md);
+}
+
+.shopping-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+    align-items: center;
+}
+
+.shopping-card figure img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 2rem;
+    object-fit: cover;
+    border: 0.1rem solid var(--very-light-pink);
+}
+
+.shopping-card p:nth-child(2){
+    color: var(--very-light-pink);
+    font-size: var(--md);
+}
+
+.shopping-card p:nth-child(3) {
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+
+.primary-button {
+    background-color: var(--hospital-yellow);
+    border-radius: 0.8rem;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    color: #ffffff;
+    height: 5rem;
+}
+
 @media (max-width: 640px) {
     .menu {
         display: block;
@@ -211,6 +305,10 @@ nav {
 
     .navbar-left ul, .navbar-email, .desktop-menu{
         display: none;
+    }
+
+    .product-detail {
+        width: 100%;
     }
 }
 
